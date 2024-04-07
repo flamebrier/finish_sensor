@@ -6,9 +6,12 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
+    private  lateinit var imageView: ImageView
+
     private lateinit var sensorManager: SensorManager
     private var aSensor: Sensor? = null
     private var pSensor: Sensor? = null
@@ -20,6 +23,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         setContentView(R.layout.activity_main)
         // получение объекта на странице и присвоение ему значения по умолчанию
         // TODO
+        imageView = findViewById(R.id.imageView)
+        imageView.translationX = 0.0f
+        imageView.translationY = 0.0f
 
         // обращение к датчикам телефона
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
