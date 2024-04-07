@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="acc">Акселерометр</string>
+    <string name="magnet">Магнитный датчик</string>
+    <string name="prox">Приближение</string>
+    <string name="light">Освещение</string>
+</resources>
